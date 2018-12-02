@@ -1,0 +1,45 @@
+
+
+.header-title:empty::after { content: "Storyboard sans nom"; }
+.scene-title:empty::after { content: "Scène sans nom"; }
+.scene-overview:empty::after { content: "Synopsis de la scène"; }
+.shadow .scene-close::before { content: "nouvelle scène"; }
+
+.scene-close::before {
+	content: "SCENE "counter(total-scenes, decimal-leading-zero);
+}
+.frame-nbr::after {
+	content: " SCENE "counter(total-scenes, decimal-leading-zero)
+			 " PLAN " counter(scene-shot, decimal-leading-zero);
+}
+.frames::after {
+	content: counter(scene-shot) " PLANS / "
+			 counter(scene-frame)" CASES ";
+}
+.story::after {
+	content: counter(total-scenes)" SCENES / "
+			 counter(total-shots) " PLANS / "
+			 counter(total-frames)" CASES ";
+}
+
+.changed .story::before { content: "Des modifications n'ont pas été sauvegardées"; }
+
+.toggle-nbr::after { content: "numéros"; }
+.toggle-fsc::after { content: "plein écran"; }
+.toggle-scn::after { content: "Afficher tout"; }
+.toggle-scn.off::after { content: "Cacher tout"; }
+
+.select-view-all::after { content: "images & textes"; }
+.select-view-img::after { content: "images seules"; }
+.select-view-txt::after { content: "textes seuls"; }
+
+.select-size-sml::after { content: "petit"; }
+.select-size-med::after { content: "moyen"; }
+.select-size-big::after { content: "grand"; }
+.select-size-ful::after { content: "maxi"; }
+
+.btn-edit.off::after { content: "modifier"; }
+.btn-edit::after {  content: "afficher"; }
+.btn-edit.import::after { content: "import"; }
+.btn-edit.export::after { content: "export"; }
+.btn-edit.loading::after { content: "chargement"; }

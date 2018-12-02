@@ -1,0 +1,25 @@
+
+
+body {
+	background: #333;
+}
+.scene {
+	background: #464343;
+}
+.scene-header {
+    background: #3A3939;
+    color: #eee;
+}
+.scene-header_buttons .btn {
+    border-color: #eee;
+    background: #ccc;
+}
+.frame-img,
+.frame-text {
+	background: #3A3939;
+	border-color: #3A3939;
+	color: #eee;
+}
+.frame.shadow .frame-img {
+    outline-color: #3A3939;
+}
